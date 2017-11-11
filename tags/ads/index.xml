@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ads on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/ads/</link>
+    <link>http://astolzen.github.io/tags/ads/</link>
     <description>Recent content in Ads on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Mon, 11 Mar 2013 14:10:42 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/ads/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/ads/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux-Integration in ADS Domains</title>
-      <link>http://astolzen.github.i0/post/2013_ads_integration/</link>
+      <link>http://astolzen.github.io/post/2013_ads_integration/</link>
       <pubDate>Mon, 11 Mar 2013 14:10:42 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013_ads_integration/</guid>
+      <guid>http://astolzen.github.io/post/2013_ads_integration/</guid>
       <description>Ein paar Notizen und Informationen zum Thema ADS-Integration mit Linux
 1. ADS-Integration über den Kerberos-Client /etc/krb5.conf
 default_realm = DC.EXAMPLE.COM [realms] DC.EXAMPLE.COM = { kdc = DC.AD.example.com default_domain = ad.example.com } [domain_realm] .ad.example.com = AD.EXAMPLE.COM .ipa.example.com = AD.EXAMPLE.COM 

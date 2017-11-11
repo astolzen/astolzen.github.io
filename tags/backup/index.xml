@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Backup on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/backup/</link>
+    <link>http://astolzen.github.io/tags/backup/</link>
     <description>Recent content in Backup on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Wed, 13 Nov 2013 15:50:24 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/backup/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Verschlüsselte TAR-Backups erstellen</title>
-      <link>http://astolzen.github.i0/post/2013verschluesselt_tar/</link>
+      <link>http://astolzen.github.io/post/2013verschluesselt_tar/</link>
       <pubDate>Wed, 13 Nov 2013 15:50:24 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013verschluesselt_tar/</guid>
+      <guid>http://astolzen.github.io/post/2013verschluesselt_tar/</guid>
       <description>Wer TAR-Dateien auf Cloud-Speichern wie Dropbox oder Ubuntu One hinterlegen will, sollte diese verschlüsseln. Mit OpenSSL ist das auch kein großes Hexenwerk:
 tar -czvf - quelle | openssl enc -aes-256-cbc -e &amp;gt; ziel_enc.tar.gz
 Kurz nach dem Start fordert OpenSSL den Anwender auf, zwei mal ein passendes Passwort für die Verschlüsselung einzutippen.

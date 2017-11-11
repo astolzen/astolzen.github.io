@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gluster on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/gluster/</link>
+    <link>http://astolzen.github.io/tags/gluster/</link>
     <description>Recent content in Gluster on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Mon, 24 Feb 2014 16:36:25 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/gluster/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/gluster/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gluster UUID modifizieren</title>
-      <link>http://astolzen.github.i0/post/2014gluster_uuid/</link>
+      <link>http://astolzen.github.io/post/2014gluster_uuid/</link>
       <pubDate>Mon, 24 Feb 2014 16:36:25 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2014gluster_uuid/</guid>
+      <guid>http://astolzen.github.io/post/2014gluster_uuid/</guid>
       <description>Erstellt man in einer virtualisierten Testumgebung mehrere GlusterFS-Nodes aus einem einzigen Template, wird GlusterFS nicht funktionieren, da alle Nodes mit der gleichen UUID arbeiten. Bevor der Verwalter die Peers zu einem Verband zusammenfügt, brauchen die Nodes daher neue, eindeutige UUIDs.
 Diese IDs sicher Gluster in /var/lib/glusterd/glusterd.info
 Es genügt, diese Datei zu Löschen und den Dienst neu zu starten, um eine neue ID generieren zu lassen:

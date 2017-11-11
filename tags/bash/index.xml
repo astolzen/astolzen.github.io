@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bash on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/bash/</link>
+    <link>http://astolzen.github.io/tags/bash/</link>
     <description>Recent content in Bash on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Wed, 28 Jul 2010 10:25:46 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Verzeichnisse rekursiv löschen</title>
-      <link>http://astolzen.github.i0/post/2010rekursiv/</link>
+      <link>http://astolzen.github.io/post/2010rekursiv/</link>
       <pubDate>Wed, 28 Jul 2010 10:25:46 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2010rekursiv/</guid>
+      <guid>http://astolzen.github.io/post/2010rekursiv/</guid>
       <description>Folgende Zeile löscht die .thumbnail-Verzeichnisse im Bildarchiv rekursiv:
 find . -name .thumbnails -type d -exec rm -r {} \;
 Um Dateien rekursiv zu löschen funktioniert das Kommando auch mit dem Parameter

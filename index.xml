@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>astolzen.github.io</title>
-    <link>http://astolzen.github.i0/</link>
+    <link>http://astolzen.github.io/</link>
     <description>Recent content on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Tue, 28 Jul 2015 18:21:10 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>QCOW2 Images lokal einbinden</title>
-      <link>http://astolzen.github.i0/post/2015qcow2_lokal/</link>
+      <link>http://astolzen.github.io/post/2015qcow2_lokal/</link>
       <pubDate>Tue, 28 Jul 2015 18:21:10 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2015qcow2_lokal/</guid>
+      <guid>http://astolzen.github.io/post/2015qcow2_lokal/</guid>
       <description>Mit Hilfe des &amp;#8222;Network Block Device&amp;#8220; nbd lassen sich qcow2-Images auch lokal einbinden. Dazu muss zunächst das passende Kernelmodul geladen werden:
 modprobe nbd max_part=8
 wobei _maxpart die maximale Zahl der Partitionen pro Device festlegt
@@ -30,10 +30,10 @@ fdisk /dev/nbd0 .. mkfs.</description>
     
     <item>
       <title>Zugriffsrechte auf Arduino und USB-Uart</title>
-      <link>http://astolzen.github.i0/post/2015zugriffsrechte_usb/</link>
+      <link>http://astolzen.github.io/post/2015zugriffsrechte_usb/</link>
       <pubDate>Sat, 25 Apr 2015 13:14:35 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2015zugriffsrechte_usb/</guid>
+      <guid>http://astolzen.github.io/post/2015zugriffsrechte_usb/</guid>
       <description>Per Default erhält nur &amp;#8222;root&amp;#8220; rw-Rechte auf USB-Adapter mit seriellen Schnittstellen, wie man sie für die Ansteuerung vom ESP8266 oder dem Arduino braucht. Eine simple udev-rule gibt alle Nutzern zugriff auf die USB-Adapter:
 in: /etc/udev/rules.d eine neue Regel erstellen, z.b. 92-serial-USB.rules mit folgendem Inhalt:
 #Allow all Access to USB Serial Devices KERNEL==&amp;quot;ttyUSB*&amp;quot;, GROUP=&amp;quot;ast&amp;quot;, MODE=&amp;quot;0666&amp;quot; #same for Arduino KERNEL==&amp;quot;ttyACM*&amp;quot;, GROUP=&amp;quot;ast&amp;quot;, MODE=&amp;quot;0666&amp;quot;  Neu eingesteckte USB-Schnittstellen sind dann in der Gruppe &amp;#8222;ast&amp;#8220; verfügbar und geben alle Nutzern rw-Rechte.</description>
@@ -41,10 +41,10 @@ in: /etc/udev/rules.d eine neue Regel erstellen, z.b. 92-serial-USB.rules mit fo
     
     <item>
       <title>Centos-Container für LXC erstellen</title>
-      <link>http://astolzen.github.i0/post/2015centos_lxc/</link>
+      <link>http://astolzen.github.io/post/2015centos_lxc/</link>
       <pubDate>Wed, 08 Apr 2015 11:19:50 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2015centos_lxc/</guid>
+      <guid>http://astolzen.github.io/post/2015centos_lxc/</guid>
       <description>Für CentOS 6 gibt es im paket lxc-templates eine Vorlage. Dazu muss man lediglich das Skript
 /usr/share/lxc/templates/lxc-centos
 anpassen und den richtigen Zielpfad für das Dateisystem festlegen (/var/lib/libvirt/filesystems):
@@ -55,40 +55,40 @@ yum -y --installroot=/var/lib/libvirt/filesystems/mycentos7 --releasever=7 group
     
     <item>
       <title>Alle Pakete eines Repos entfernen</title>
-      <link>http://astolzen.github.i0/post/2014pakete_entfernen/</link>
+      <link>http://astolzen.github.io/post/2014pakete_entfernen/</link>
       <pubDate>Tue, 16 Dec 2014 16:05:06 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2014pakete_entfernen/</guid>
+      <guid>http://astolzen.github.io/post/2014pakete_entfernen/</guid>
       <description>Alle Pakete eines bestimmten Channels oder Repositories lassen sich wie folgt entfernen:
 yum remove $(yum list installed | grep ovirt | awk &#39;{ print $1 }&#39;)  Wobei ovirt hier für den Namen des Repostitries steht.</description>
     </item>
     
     <item>
       <title>Dummy Interface</title>
-      <link>http://astolzen.github.i0/index.php/2014/12/08/dummy-interface/</link>
+      <link>http://astolzen.github.io/index.php/2014/12/08/dummy-interface/</link>
       <pubDate>Mon, 08 Dec 2014 15:49:30 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/index.php/2014/12/08/dummy-interface/</guid>
+      <guid>http://astolzen.github.io/index.php/2014/12/08/dummy-interface/</guid>
       <description>Verschiedene Einsatzgebiete, wie unter anderem Offline-Demo-Setups von Cloud- und Virtualisierungsdiensten, erfordern ein Pseodo-Netzwerkinterface, auf das sich eine Bridge binden läßt. Der Linux Kernel unterstützt dazu das &amp;#8222;dummy&amp;#8220;-Interface. Allerdings generiert das System bei jedem Neustart ein neues Pseudo-Interface mit einer neuen MAC-Adresse, so dass die Netwerk-Konfiguration nach dem Reboot nicht mehr passt.
 Abhilfe schafft ein kleinen Skript (in /etc/rc.local), welches beim Systemstart das Dummy-Interface erzeugt und ihm eine fixe MAC-Adresse zuweist:</description>
     </item>
     
     <item>
       <title>Hwclock adjust</title>
-      <link>http://astolzen.github.i0/post/2014hwclock/</link>
+      <link>http://astolzen.github.io/post/2014hwclock/</link>
       <pubDate>Wed, 12 Nov 2014 16:19:00 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2014hwclock/</guid>
+      <guid>http://astolzen.github.io/post/2014hwclock/</guid>
       <description>Beim Setzen der Hardware-Uhr (auch in einer VM) schreibt hwclock ein &amp;#8222;adjust file&amp;#8220; welches die Differenz der Hardware-Uhr (UTC) zur Systemzeit (GMT+1) ablegt. Ist die Differenz zwischen System- und Hardware-Zeit nicht korrekt konfiguriert, wird der Server/VM nach einem Neustart in der Zeit um eines Stunde abweichen. Abhilfe schafft es dann, die hwclock auf die locale Zeit zu zwingen:
 ntpdate ptbtime1.ptb.de hwclock -w --localtime  oder einfach zur Sicherheit das Adjust-File löschen</description>
     </item>
     
     <item>
       <title>rhev/ovirt Export Domain bereinigen</title>
-      <link>http://astolzen.github.i0/post/2014export_domain/</link>
+      <link>http://astolzen.github.io/post/2014export_domain/</link>
       <pubDate>Wed, 02 Apr 2014 16:28:32 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2014export_domain/</guid>
+      <guid>http://astolzen.github.io/post/2014export_domain/</guid>
       <description>Wurde eine Export Domain nicht sauber von einem Data Center getrennt, läßt sie sich nicht an ein anderes DC anbinden. Dieses Problem läßt sich manuell bereinigen:
 Auf der Export-Domain in das Verzeichnis /dom_md wechseln und die Datei metadata editieren:
 Der Eintrag
@@ -103,10 +103,10 @@ Anschliessend läßt sich die Export Domain wieder an ein DC anbinden.</descript
     
     <item>
       <title>Gluster UUID modifizieren</title>
-      <link>http://astolzen.github.i0/post/2014gluster_uuid/</link>
+      <link>http://astolzen.github.io/post/2014gluster_uuid/</link>
       <pubDate>Mon, 24 Feb 2014 16:36:25 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2014gluster_uuid/</guid>
+      <guid>http://astolzen.github.io/post/2014gluster_uuid/</guid>
       <description>Erstellt man in einer virtualisierten Testumgebung mehrere GlusterFS-Nodes aus einem einzigen Template, wird GlusterFS nicht funktionieren, da alle Nodes mit der gleichen UUID arbeiten. Bevor der Verwalter die Peers zu einem Verband zusammenfügt, brauchen die Nodes daher neue, eindeutige UUIDs.
 Diese IDs sicher Gluster in /var/lib/glusterd/glusterd.info
 Es genügt, diese Datei zu Löschen und den Dienst neu zu starten, um eine neue ID generieren zu lassen:
@@ -115,30 +115,30 @@ service glusterd stop rm -f /var/lib/glusterd/glusterd.</description>
     
     <item>
       <title>Postgres Spalten finden</title>
-      <link>http://astolzen.github.i0/post/2013postgres/</link>
+      <link>http://astolzen.github.io/post/2013postgres/</link>
       <pubDate>Tue, 17 Dec 2013 16:43:15 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013postgres/</guid>
+      <guid>http://astolzen.github.io/post/2013postgres/</guid>
       <description>Um in einer Postgres Datenbank die Tabellen zu finden, welche eine bestimmte Spalte enthalten genügt folgendes Kommando:
 select table_name from information_schema.columns where column_name = &#39;Spaltenname&#39;;</description>
     </item>
     
     <item>
       <title>UUID für RHEV oder ovirt erstellen</title>
-      <link>http://astolzen.github.i0/post/2013uuid_erstellen/</link>
+      <link>http://astolzen.github.io/post/2013uuid_erstellen/</link>
       <pubDate>Mon, 16 Dec 2013 16:45:28 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013uuid_erstellen/</guid>
+      <guid>http://astolzen.github.io/post/2013uuid_erstellen/</guid>
       <description>Ein Hypervisor Node für ovirt oder RHEV bekommt eine eindeutige UUID. Diese errechnet sich via dmidecode aus der BIOS-Seriennummer. Simple Whitebox-Server haben aber oft keine individuelle Serien-Nummer im Bios. Setzt man eine ovirt/RHEV-Umgebung mit solchen Serversystemen auf, bekommen alle Hypervisor-Nodes die gleiche UUID und das RHEV/ovirt-Setup schlägt fehl.
 Um das zu vermeiden kann der Verwalter, vor der Installation des Hypervisors und dessen ovirt/RHEV-Steuerdaemons vdsm, eine zufällige UUID für das jeweilige System erzeugen:</description>
     </item>
     
     <item>
       <title>Verschlüsselte TAR-Backups erstellen</title>
-      <link>http://astolzen.github.i0/post/2013verschluesselt_tar/</link>
+      <link>http://astolzen.github.io/post/2013verschluesselt_tar/</link>
       <pubDate>Wed, 13 Nov 2013 15:50:24 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013verschluesselt_tar/</guid>
+      <guid>http://astolzen.github.io/post/2013verschluesselt_tar/</guid>
       <description>Wer TAR-Dateien auf Cloud-Speichern wie Dropbox oder Ubuntu One hinterlegen will, sollte diese verschlüsseln. Mit OpenSSL ist das auch kein großes Hexenwerk:
 tar -czvf - quelle | openssl enc -aes-256-cbc -e &amp;gt; ziel_enc.tar.gz
 Kurz nach dem Start fordert OpenSSL den Anwender auf, zwei mal ein passendes Passwort für die Verschlüsselung einzutippen.
@@ -148,10 +148,10 @@ openssl enc -in ziel_enc.tar.gz -aes-256-cbc -d | tar -zxvf -</description>
     
     <item>
       <title>Redhat / Fedora. Wlan ohne Network Manager konfigurieren</title>
-      <link>http://astolzen.github.i0/post/2013wlan_ohnenm/</link>
+      <link>http://astolzen.github.io/post/2013wlan_ohnenm/</link>
       <pubDate>Wed, 16 Oct 2013 16:13:06 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013wlan_ohnenm/</guid>
+      <guid>http://astolzen.github.io/post/2013wlan_ohnenm/</guid>
       <description>Es gibt eine ganze Reihe verschiedener Einsatzgebiete, in denen WLAN-Adapter unter Linux ohne GUI laufen müssen. Hier ist NetworkManager als Netzwerk-Daemon eher hinderlich &amp;#8212; in Servern schaltet man ihn ohnehin ab.
 Die Einrichtung eines WLAN-Adapters auf der CLI funktioniert auch ohne NetworkManager recht simpel.
 Namen des Wireless-Interfaces ermitteln: iwconfig
@@ -162,20 +162,20 @@ service NetworkManager stop chkconfig NetworkManager off  Fedora19+ / RHEL7:</de
     
     <item>
       <title>rhev/ovirt Defekte Disk-Images aus der DB entfernen</title>
-      <link>http://astolzen.github.i0/post/2013ovirt_disk_db/</link>
+      <link>http://astolzen.github.io/post/2013ovirt_disk_db/</link>
       <pubDate>Wed, 17 Jul 2013 10:53:26 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013ovirt_disk_db/</guid>
+      <guid>http://astolzen.github.io/post/2013ovirt_disk_db/</guid>
       <description>Wenn es beim Import von Templates oder VMs aus der Export-Domain zu Problemen kommt, kann es sein, dass Disk-Images im Status &amp;#8222;locked&amp;#8220; bleiben. Das blockiert die importierte VM oder das Template, so dass diese sich nicht löschen lassen. In der Folge läßt sich die Export-Domain im Zweifelsfall nicht mehr abhängen.
 Um den Fehler zu beheben, muss der Administrator die Disk-Images auf der Export-Domain manuell löschen und zudem die Einträge aus der Datenbank auf dem rhev-m/ovirt-Server händisch entfernen:</description>
     </item>
     
     <item>
       <title>Mapping von SG-Devices anzeigen</title>
-      <link>http://astolzen.github.i0/post/2013sg_devices/</link>
+      <link>http://astolzen.github.io/post/2013sg_devices/</link>
       <pubDate>Mon, 10 Jun 2013 11:54:14 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013sg_devices/</guid>
+      <guid>http://astolzen.github.io/post/2013sg_devices/</guid>
       <description>Um die Zuweisung von physischen SCSI-Geräten zu logischen devices darzustellen, gibt es ein simples Tool namens _sgmap. Das Binary befindet sich im Paket _sg3utils
 &amp;lt;br /&amp;gt; yum install sg3_utils&amp;lt;br /&amp;gt; 
 Dann liefert das Proramm die Zuweisungsliste:
@@ -200,10 +200,10 @@ sg_map
     
     <item>
       <title>NAT forwarding auf Linux</title>
-      <link>http://astolzen.github.i0/post/2013nat/</link>
+      <link>http://astolzen.github.io/post/2013nat/</link>
       <pubDate>Mon, 03 Jun 2013 18:27:38 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013nat/</guid>
+      <guid>http://astolzen.github.io/post/2013nat/</guid>
       <description>IP-Forwarding im Kernel einschaten:
 echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/ip_forward
 Um die Einstellung permanten zu machen, den entsprechenden Eintrag in /etc/sysctl.conf anpassen
@@ -214,10 +214,10 @@ fertig.</description>
     
     <item>
       <title>Tipps für das Storage-Setup</title>
-      <link>http://astolzen.github.i0/post/2013storagetipps/</link>
+      <link>http://astolzen.github.io/post/2013storagetipps/</link>
       <pubDate>Mon, 25 Mar 2013 15:12:12 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013storagetipps/</guid>
+      <guid>http://astolzen.github.io/post/2013storagetipps/</guid>
       <description>Fdisk ohne DOS-CHS Fdisk arbeitet unter Linux per Default in der alten DOS-CHS (Cylinder/Head/Sector) Zählweise. Um ohne DOS-Limits und CHS zu arbeite, fdisk immer mit:
 fdisk -cu
 starten.
@@ -228,10 +228,10 @@ die neuen Partitionen neu ein. Das funktioniert aber nur, wenn neue Partitionen 
     
     <item>
       <title>Konfiguration von VIOS auf Powerlinux7R2</title>
-      <link>http://astolzen.github.i0/post/2013vios/</link>
+      <link>http://astolzen.github.io/post/2013vios/</link>
       <pubDate>Fri, 15 Mar 2013 09:50:11 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013vios/</guid>
+      <guid>http://astolzen.github.io/post/2013vios/</guid>
       <description>Vios-Version abrufen (als padmin, nicht als root):ioslevel
 Admin-User auf VIOS (AIX) = padmin
 Die Korn Shell von padmin ist eingeschränkt und auf das Home-Directory beschränkt: Root-Access gibt es über oem_setup_env
@@ -241,10 +241,10 @@ Shell-Access zu VMS Shell-Access zu neuen virtuellen Maschinen ohne eigene IP l�
     
     <item>
       <title>Linux-Integration in ADS Domains</title>
-      <link>http://astolzen.github.i0/post/2013_ads_integration/</link>
+      <link>http://astolzen.github.io/post/2013_ads_integration/</link>
       <pubDate>Mon, 11 Mar 2013 14:10:42 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013_ads_integration/</guid>
+      <guid>http://astolzen.github.io/post/2013_ads_integration/</guid>
       <description>Ein paar Notizen und Informationen zum Thema ADS-Integration mit Linux
 1. ADS-Integration über den Kerberos-Client /etc/krb5.conf
 default_realm = DC.EXAMPLE.COM [realms] DC.EXAMPLE.COM = { kdc = DC.AD.example.com default_domain = ad.example.com } [domain_realm] .ad.example.com = AD.EXAMPLE.COM .ipa.example.com = AD.EXAMPLE.COM 
@@ -255,10 +255,10 @@ default_realm = DC.EXAMPLE.COM [realms] DC.EXAMPLE.COM = { kdc = DC.AD.example.c
     
     <item>
       <title>Thin Provisioning Disk für iSCSI-Target erstellen</title>
-      <link>http://astolzen.github.i0/post/2010thinprovisioning/</link>
+      <link>http://astolzen.github.io/post/2010thinprovisioning/</link>
       <pubDate>Sun, 17 Oct 2010 14:47:47 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2010thinprovisioning/</guid>
+      <guid>http://astolzen.github.io/post/2010thinprovisioning/</guid>
       <description>Mit Hilfe einer Sparse-Datei läßt sich auf die schnelle eine leere Datei zu erstellen, die auf maximale 100 GB wachsen kann. &amp;#8218;dd&amp;#8216; schreibt zwar nur einen Block setzt dabei jedoch den Pointer an das virtuelle Ende der Datei bei 100 GByte
 dd if=/dev/zero of=iscsi0.dsk bs=512 count=1 seek=209715200
 Diese Datei läßt sich dann dem iSCSI-Target übergeben und wird so zur Thin-provisioned LUN.</description>
@@ -266,10 +266,10 @@ Diese Datei läßt sich dann dem iSCSI-Target übergeben und wird so zur Thin-pr
     
     <item>
       <title>Verzeichnisse rekursiv löschen</title>
-      <link>http://astolzen.github.i0/post/2010rekursiv/</link>
+      <link>http://astolzen.github.io/post/2010rekursiv/</link>
       <pubDate>Wed, 28 Jul 2010 10:25:46 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2010rekursiv/</guid>
+      <guid>http://astolzen.github.io/post/2010rekursiv/</guid>
       <description>Folgende Zeile löscht die .thumbnail-Verzeichnisse im Bildarchiv rekursiv:
 find . -name .thumbnails -type d -exec rm -r {} \;
 Um Dateien rekursiv zu löschen funktioniert das Kommando auch mit dem Parameter

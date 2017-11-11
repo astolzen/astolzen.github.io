@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redhat on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/redhat/</link>
+    <link>http://astolzen.github.io/tags/redhat/</link>
     <description>Recent content in Redhat on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Wed, 13 Nov 2013 15:50:24 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/redhat/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/redhat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Verschlüsselte TAR-Backups erstellen</title>
-      <link>http://astolzen.github.i0/post/2013verschluesselt_tar/</link>
+      <link>http://astolzen.github.io/post/2013verschluesselt_tar/</link>
       <pubDate>Wed, 13 Nov 2013 15:50:24 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013verschluesselt_tar/</guid>
+      <guid>http://astolzen.github.io/post/2013verschluesselt_tar/</guid>
       <description>Wer TAR-Dateien auf Cloud-Speichern wie Dropbox oder Ubuntu One hinterlegen will, sollte diese verschlüsseln. Mit OpenSSL ist das auch kein großes Hexenwerk:
 tar -czvf - quelle | openssl enc -aes-256-cbc -e &amp;gt; ziel_enc.tar.gz
 Kurz nach dem Start fordert OpenSSL den Anwender auf, zwei mal ein passendes Passwort für die Verschlüsselung einzutippen.
@@ -26,10 +26,10 @@ openssl enc -in ziel_enc.tar.gz -aes-256-cbc -d | tar -zxvf -</description>
     
     <item>
       <title>Redhat / Fedora. Wlan ohne Network Manager konfigurieren</title>
-      <link>http://astolzen.github.i0/post/2013wlan_ohnenm/</link>
+      <link>http://astolzen.github.io/post/2013wlan_ohnenm/</link>
       <pubDate>Wed, 16 Oct 2013 16:13:06 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013wlan_ohnenm/</guid>
+      <guid>http://astolzen.github.io/post/2013wlan_ohnenm/</guid>
       <description>Es gibt eine ganze Reihe verschiedener Einsatzgebiete, in denen WLAN-Adapter unter Linux ohne GUI laufen müssen. Hier ist NetworkManager als Netzwerk-Daemon eher hinderlich &amp;#8212; in Servern schaltet man ihn ohnehin ab.
 Die Einrichtung eines WLAN-Adapters auf der CLI funktioniert auch ohne NetworkManager recht simpel.
 Namen des Wireless-Interfaces ermitteln: iwconfig
@@ -40,20 +40,20 @@ service NetworkManager stop chkconfig NetworkManager off  Fedora19+ / RHEL7:</de
     
     <item>
       <title>rhev/ovirt Defekte Disk-Images aus der DB entfernen</title>
-      <link>http://astolzen.github.i0/post/2013ovirt_disk_db/</link>
+      <link>http://astolzen.github.io/post/2013ovirt_disk_db/</link>
       <pubDate>Wed, 17 Jul 2013 10:53:26 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013ovirt_disk_db/</guid>
+      <guid>http://astolzen.github.io/post/2013ovirt_disk_db/</guid>
       <description>Wenn es beim Import von Templates oder VMs aus der Export-Domain zu Problemen kommt, kann es sein, dass Disk-Images im Status &amp;#8222;locked&amp;#8220; bleiben. Das blockiert die importierte VM oder das Template, so dass diese sich nicht löschen lassen. In der Folge läßt sich die Export-Domain im Zweifelsfall nicht mehr abhängen.
 Um den Fehler zu beheben, muss der Administrator die Disk-Images auf der Export-Domain manuell löschen und zudem die Einträge aus der Datenbank auf dem rhev-m/ovirt-Server händisch entfernen:</description>
     </item>
     
     <item>
       <title>Tipps für das Storage-Setup</title>
-      <link>http://astolzen.github.i0/post/2013storagetipps/</link>
+      <link>http://astolzen.github.io/post/2013storagetipps/</link>
       <pubDate>Mon, 25 Mar 2013 15:12:12 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013storagetipps/</guid>
+      <guid>http://astolzen.github.io/post/2013storagetipps/</guid>
       <description>Fdisk ohne DOS-CHS Fdisk arbeitet unter Linux per Default in der alten DOS-CHS (Cylinder/Head/Sector) Zählweise. Um ohne DOS-Limits und CHS zu arbeite, fdisk immer mit:
 fdisk -cu
 starten.
@@ -64,10 +64,10 @@ die neuen Partitionen neu ein. Das funktioniert aber nur, wenn neue Partitionen 
     
     <item>
       <title>Linux-Integration in ADS Domains</title>
-      <link>http://astolzen.github.i0/post/2013_ads_integration/</link>
+      <link>http://astolzen.github.io/post/2013_ads_integration/</link>
       <pubDate>Mon, 11 Mar 2013 14:10:42 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013_ads_integration/</guid>
+      <guid>http://astolzen.github.io/post/2013_ads_integration/</guid>
       <description>Ein paar Notizen und Informationen zum Thema ADS-Integration mit Linux
 1. ADS-Integration über den Kerberos-Client /etc/krb5.conf
 default_realm = DC.EXAMPLE.COM [realms] DC.EXAMPLE.COM = { kdc = DC.AD.example.com default_domain = ad.example.com } [domain_realm] .ad.example.com = AD.EXAMPLE.COM .ipa.example.com = AD.EXAMPLE.COM 

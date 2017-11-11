@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iscsi on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/iscsi/</link>
+    <link>http://astolzen.github.io/tags/iscsi/</link>
     <description>Recent content in Iscsi on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Mon, 25 Mar 2013 15:12:12 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/iscsi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/iscsi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tipps für das Storage-Setup</title>
-      <link>http://astolzen.github.i0/post/2013storagetipps/</link>
+      <link>http://astolzen.github.io/post/2013storagetipps/</link>
       <pubDate>Mon, 25 Mar 2013 15:12:12 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013storagetipps/</guid>
+      <guid>http://astolzen.github.io/post/2013storagetipps/</guid>
       <description>Fdisk ohne DOS-CHS Fdisk arbeitet unter Linux per Default in der alten DOS-CHS (Cylinder/Head/Sector) Zählweise. Um ohne DOS-Limits und CHS zu arbeite, fdisk immer mit:
 fdisk -cu
 starten.
@@ -27,10 +27,10 @@ die neuen Partitionen neu ein. Das funktioniert aber nur, wenn neue Partitionen 
     
     <item>
       <title>Thin Provisioning Disk für iSCSI-Target erstellen</title>
-      <link>http://astolzen.github.i0/post/2010thinprovisioning/</link>
+      <link>http://astolzen.github.io/post/2010thinprovisioning/</link>
       <pubDate>Sun, 17 Oct 2010 14:47:47 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2010thinprovisioning/</guid>
+      <guid>http://astolzen.github.io/post/2010thinprovisioning/</guid>
       <description>Mit Hilfe einer Sparse-Datei läßt sich auf die schnelle eine leere Datei zu erstellen, die auf maximale 100 GB wachsen kann. &amp;#8218;dd&amp;#8216; schreibt zwar nur einen Block setzt dabei jedoch den Pointer an das virtuelle Ende der Datei bei 100 GByte
 dd if=/dev/zero of=iscsi0.dsk bs=512 count=1 seek=209715200
 Diese Datei läßt sich dann dem iSCSI-Target übergeben und wird so zur Thin-provisioned LUN.</description>

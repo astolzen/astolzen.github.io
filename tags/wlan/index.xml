@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wlan on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/wlan/</link>
+    <link>http://astolzen.github.io/tags/wlan/</link>
     <description>Recent content in Wlan on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Wed, 16 Oct 2013 16:13:06 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/wlan/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/wlan/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Redhat / Fedora. Wlan ohne Network Manager konfigurieren</title>
-      <link>http://astolzen.github.i0/post/2013wlan_ohnenm/</link>
+      <link>http://astolzen.github.io/post/2013wlan_ohnenm/</link>
       <pubDate>Wed, 16 Oct 2013 16:13:06 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013wlan_ohnenm/</guid>
+      <guid>http://astolzen.github.io/post/2013wlan_ohnenm/</guid>
       <description>Es gibt eine ganze Reihe verschiedener Einsatzgebiete, in denen WLAN-Adapter unter Linux ohne GUI laufen müssen. Hier ist NetworkManager als Netzwerk-Daemon eher hinderlich &amp;#8212; in Servern schaltet man ihn ohnehin ab.
 Die Einrichtung eines WLAN-Adapters auf der CLI funktioniert auch ohne NetworkManager recht simpel.
 Namen des Wireless-Interfaces ermitteln: iwconfig

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aix on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/categories/aix/</link>
+    <link>http://astolzen.github.io/categories/aix/</link>
     <description>Recent content in Aix on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Fri, 15 Mar 2013 09:50:11 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/categories/aix/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/categories/aix/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Konfiguration von VIOS auf Powerlinux7R2</title>
-      <link>http://astolzen.github.i0/post/2013vios/</link>
+      <link>http://astolzen.github.io/post/2013vios/</link>
       <pubDate>Fri, 15 Mar 2013 09:50:11 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013vios/</guid>
+      <guid>http://astolzen.github.io/post/2013vios/</guid>
       <description>Vios-Version abrufen (als padmin, nicht als root):ioslevel
 Admin-User auf VIOS (AIX) = padmin
 Die Korn Shell von padmin ist eingeschränkt und auf das Home-Directory beschränkt: Root-Access gibt es über oem_setup_env

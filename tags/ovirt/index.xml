@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ovirt on astolzen.github.io</title>
-    <link>http://astolzen.github.i0/tags/ovirt/</link>
+    <link>http://astolzen.github.io/tags/ovirt/</link>
     <description>Recent content in Ovirt on astolzen.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-DE</language>
     <lastBuildDate>Wed, 02 Apr 2014 16:28:32 +0000</lastBuildDate>
     
-	<atom:link href="http://astolzen.github.i0/tags/ovirt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://astolzen.github.io/tags/ovirt/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>rhev/ovirt Export Domain bereinigen</title>
-      <link>http://astolzen.github.i0/post/2014export_domain/</link>
+      <link>http://astolzen.github.io/post/2014export_domain/</link>
       <pubDate>Wed, 02 Apr 2014 16:28:32 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2014export_domain/</guid>
+      <guid>http://astolzen.github.io/post/2014export_domain/</guid>
       <description>Wurde eine Export Domain nicht sauber von einem Data Center getrennt, läßt sie sich nicht an ein anderes DC anbinden. Dieses Problem läßt sich manuell bereinigen:
 Auf der Export-Domain in das Verzeichnis /dom_md wechseln und die Datei metadata editieren:
 Der Eintrag
@@ -31,30 +31,30 @@ Anschliessend läßt sich die Export Domain wieder an ein DC anbinden.</descript
     
     <item>
       <title>Postgres Spalten finden</title>
-      <link>http://astolzen.github.i0/post/2013postgres/</link>
+      <link>http://astolzen.github.io/post/2013postgres/</link>
       <pubDate>Tue, 17 Dec 2013 16:43:15 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013postgres/</guid>
+      <guid>http://astolzen.github.io/post/2013postgres/</guid>
       <description>Um in einer Postgres Datenbank die Tabellen zu finden, welche eine bestimmte Spalte enthalten genügt folgendes Kommando:
 select table_name from information_schema.columns where column_name = &#39;Spaltenname&#39;;</description>
     </item>
     
     <item>
       <title>UUID für RHEV oder ovirt erstellen</title>
-      <link>http://astolzen.github.i0/post/2013uuid_erstellen/</link>
+      <link>http://astolzen.github.io/post/2013uuid_erstellen/</link>
       <pubDate>Mon, 16 Dec 2013 16:45:28 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013uuid_erstellen/</guid>
+      <guid>http://astolzen.github.io/post/2013uuid_erstellen/</guid>
       <description>Ein Hypervisor Node für ovirt oder RHEV bekommt eine eindeutige UUID. Diese errechnet sich via dmidecode aus der BIOS-Seriennummer. Simple Whitebox-Server haben aber oft keine individuelle Serien-Nummer im Bios. Setzt man eine ovirt/RHEV-Umgebung mit solchen Serversystemen auf, bekommen alle Hypervisor-Nodes die gleiche UUID und das RHEV/ovirt-Setup schlägt fehl.
 Um das zu vermeiden kann der Verwalter, vor der Installation des Hypervisors und dessen ovirt/RHEV-Steuerdaemons vdsm, eine zufällige UUID für das jeweilige System erzeugen:</description>
     </item>
     
     <item>
       <title>rhev/ovirt Defekte Disk-Images aus der DB entfernen</title>
-      <link>http://astolzen.github.i0/post/2013ovirt_disk_db/</link>
+      <link>http://astolzen.github.io/post/2013ovirt_disk_db/</link>
       <pubDate>Wed, 17 Jul 2013 10:53:26 +0000</pubDate>
       
-      <guid>http://astolzen.github.i0/post/2013ovirt_disk_db/</guid>
+      <guid>http://astolzen.github.io/post/2013ovirt_disk_db/</guid>
       <description>Wenn es beim Import von Templates oder VMs aus der Export-Domain zu Problemen kommt, kann es sein, dass Disk-Images im Status &amp;#8222;locked&amp;#8220; bleiben. Das blockiert die importierte VM oder das Template, so dass diese sich nicht löschen lassen. In der Folge läßt sich die Export-Domain im Zweifelsfall nicht mehr abhängen.
 Um den Fehler zu beheben, muss der Administrator die Disk-Images auf der Export-Domain manuell löschen und zudem die Einträge aus der Datenbank auf dem rhev-m/ovirt-Server händisch entfernen:</description>
     </item>
