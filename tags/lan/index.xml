@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lan on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/lan/</link>
+    <description>Recent content in Lan on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Mon, 08 Dec 2014 15:49:30 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/lan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dummy Interface</title>
+      <link>http://astolzen.github.i0/index.php/2014/12/08/dummy-interface/</link>
+      <pubDate>Mon, 08 Dec 2014 15:49:30 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/index.php/2014/12/08/dummy-interface/</guid>
+      <description>Verschiedene Einsatzgebiete, wie unter anderem Offline-Demo-Setups von Cloud- und Virtualisierungsdiensten, erfordern ein Pseodo-Netzwerkinterface, auf das sich eine Bridge binden läßt. Der Linux Kernel unterstützt dazu das &amp;#8222;dummy&amp;#8220;-Interface. Allerdings generiert das System bei jedem Neustart ein neues Pseudo-Interface mit einer neuen MAC-Adresse, so dass die Netwerk-Konfiguration nach dem Reboot nicht mehr passt.
+Abhilfe schafft ein kleinen Skript (in /etc/rc.local), welches beim Systemstart das Dummy-Interface erzeugt und ihm eine fixe MAC-Adresse zuweist:</description>
+    </item>
+    
+  </channel>
+</rss>

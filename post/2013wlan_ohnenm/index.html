@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>astolzen.github.io  | Redhat / Fedora. Wlan ohne Network Manager konfigurieren</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.30.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='http://astolzen.github.i0/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Redhat / Fedora. Wlan ohne Network Manager konfigurieren" />
+<meta property="og:description" content="Es gibt eine ganze Reihe verschiedener Einsatzgebiete, in denen WLAN-Adapter unter Linux ohne GUI laufen müssen. Hier ist NetworkManager als Netzwerk-Daemon eher hinderlich &#8212; in Servern schaltet man ihn ohnehin ab.
+Die Einrichtung eines WLAN-Adapters auf der CLI funktioniert auch ohne NetworkManager recht simpel.
+Namen des Wireless-Interfaces ermitteln: iwconfig
+Listet alle Interfaces auf und zeigt diejenigen mit Wireless Extensions.
+NetworkManager abschalten und deaktivieren. EL6:
+service NetworkManager stop chkconfig NetworkManager off  Fedora19&#43; / RHEL7:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://astolzen.github.i0/post/2013wlan_ohnenm/" />
+
+
+
+<meta property="article:published_time" content="2013-10-16T16:13:06&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-10-16T16:13:06&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Redhat / Fedora. Wlan ohne Network Manager konfigurieren">
+<meta itemprop="description" content="Es gibt eine ganze Reihe verschiedener Einsatzgebiete, in denen WLAN-Adapter unter Linux ohne GUI laufen müssen. Hier ist NetworkManager als Netzwerk-Daemon eher hinderlich &#8212; in Servern schaltet man ihn ohnehin ab.
+Die Einrichtung eines WLAN-Adapters auf der CLI funktioniert auch ohne NetworkManager recht simpel.
+Namen des Wireless-Interfaces ermitteln: iwconfig
+Listet alle Interfaces auf und zeigt diejenigen mit Wireless Extensions.
+NetworkManager abschalten und deaktivieren. EL6:
+service NetworkManager stop chkconfig NetworkManager off  Fedora19&#43; / RHEL7:">
+
+
+<meta itemprop="datePublished" content="2013-10-16T16:13:06&#43;00:00" />
+<meta itemprop="dateModified" content="2013-10-16T16:13:06&#43;00:00" />
+<meta itemprop="wordCount" content="249">
+
+
+
+<meta itemprop="keywords" content="fedora,redhat,rhel,wlan," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Redhat / Fedora. Wlan ohne Network Manager konfigurieren"/>
+<meta name="twitter:description" content="Es gibt eine ganze Reihe verschiedener Einsatzgebiete, in denen WLAN-Adapter unter Linux ohne GUI laufen müssen. Hier ist NetworkManager als Netzwerk-Daemon eher hinderlich &#8212; in Servern schaltet man ihn ohnehin ab.
+Die Einrichtung eines WLAN-Adapters auf der CLI funktioniert auch ohne NetworkManager recht simpel.
+Namen des Wireless-Interfaces ermitteln: iwconfig
+Listet alle Interfaces auf und zeigt diejenigen mit Wireless Extensions.
+NetworkManager abschalten und deaktivieren. EL6:
+service NetworkManager stop chkconfig NetworkManager off  Fedora19&#43; / RHEL7:"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://astolzen.github.i0/" class="f3 fw2 hover-white no-underline white-90 dib">
+      astolzen.github.io
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+  <a href="https://twitter.com/myandi" class="link-transition twitter link dib z-999 pt3 pt0-l mr2" title="Twitter link">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+
+
+
+
+  <a href="https://github.com/astolzen" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <p class="f6 b helvetica tracked">
+        
+        POST
+      </p>
+      <h1 class="f1 athelas">
+        Redhat / Fedora. Wlan ohne Network Manager konfigurieren
+      </h1>
+        
+        
+      <time class="f6 mv4 dib tracked" datetime="2013-10-16T16:13:06Z">
+        October 16, 2013
+      </time>
+      <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray">
+        
+
+<p>Es gibt eine ganze Reihe verschiedener Einsatzgebiete, in denen WLAN-Adapter unter Linux ohne GUI laufen müssen. Hier ist NetworkManager als Netzwerk-Daemon eher hinderlich &#8212; in Servern schaltet man ihn ohnehin ab.</p>
+
+<p>Die Einrichtung eines WLAN-Adapters auf der CLI funktioniert auch ohne NetworkManager recht simpel.</p>
+
+<h2 id="namen-des-wireless-interfaces-ermitteln">Namen des Wireless-Interfaces ermitteln:</h2>
+
+<p><code>iwconfig</code></p>
+
+<p>Listet alle Interfaces auf und zeigt diejenigen mit Wireless Extensions.</p>
+
+<h2 id="networkmanager-abschalten-und-deaktivieren">NetworkManager abschalten und deaktivieren.</h2>
+
+<p>EL6:</p>
+
+<pre><code>service NetworkManager stop
+chkconfig NetworkManager off
+</code></pre>
+
+<p>Fedora19+ / RHEL7:</p>
+
+<pre><code>systemctl stop NetworkManager.service
+systemctl disable NetworkManager.service
+</code></pre>
+
+<h2 id="wpa-supplicant-für-das-interface-konfigurieren">WPA-Supplicant für das Interface konfigurieren</h2>
+
+<p>in _/etc/sysconfig/wpa<em>supplicant</em> folgendes eintragen:</p>
+
+<p><code>INTERFACES=&quot;-i(interfacename)&quot;</code></p>
+
+<p>Beispiel:</p>
+
+<p><code>INTERFACES=&quot;-iwlan0&quot;</code></p>
+
+<p>Treiber für das das Interface angeben</p>
+
+<p><code>DRIVERS=&quot;-Dwext&quot;</code></p>
+
+<p>Wobei &#8222;wext&#8220; alle von Linux mit Wireless Extensions erkannten Karten unterstützt. Adapter, welche via Windows-Treiber und den Ndis-Wrapper betreiben werden, brauchen hier den Eintrag <em>&#8222;-Dndiswrapper&#8220;</em>.</p>
+
+<h2 id="den-wpa-schlüssel-eintragen">Den WPA-Schlüssel eintragen</h2>
+
+<p><code>wpa_passphrase &quot;WLAN-NAME&quot; &quot;WPA_Key&quot; &gt;&gt; /etc/wpa_supplicant/wpa_supplicant.conf</code></p>
+
+<p>Achtung: wpa_passphrase trägt den Key als Hash und im Klartext in die _wpa<em>supplicant.conf</em> ein. Nach dem Aufruf sollte der Verwalter die Date editieren und das Klartest-Passwort löschen.</p>
+
+<h2 id="network-skript-anpassen">Network Skript anpassen</h2>
+
+<p>in <em>/etc/sysconfig/network-scripts/ifcfg-</em> folgendes Eintragen</p>
+
+<pre><code>DEVICE=(interface-name)
+HWADDR=(Mac-Adresse der WLAN-Karte: siehe Ausgabe von &quot;ip a&quot;)
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=dhcp
+TYPE=Wireless
+MODE=Managed
+</code></pre>
+
+<h2 id="dienste-neu-starten-und-aktivieren">Dienste neu starten und aktivieren:</h2>
+
+<p>EL6:</p>
+
+<pre><code>service wpa_supplicant restart
+chkconfig wpa_supplicant on
+service network restart
+chkconfig network on
+</code></pre>
+
+<p>Bei Fedora die entsprechenden systemctl-Kommandos verwenden</p>
+
+<p>Probleme: Häufig kommt die WLAN-Karte nicht automatisch hoch. RHEL beispielsweise startet den WPA_Supplicant- nach dem Netzwerk-Dienst. Die Umkehr der Reihenfolge im Upstart bringt nicht viel. Was hilft, sind folgende Einträge in der <em>/etc/rc.local</em></p>
+
+<pre><code>service wpa_supplicant restart
+service network restart.
+</code></pre>
+
+<p>Das ist nicht schick, aber es funktioniert.</p>
+
+      </section>
+      
+
+  
+  
+  
+  
+  
+    <div class="mt5 f6 gray nested-lh-copy bg-light-gray ph3 pv2 measure-wide-l">
+      <ul class="list dib ml0 pl0">
+        <li class="black dib mb2 mr2">
+          Related:
+        </li>
+        
+          
+            <li class="mb2 mr3">
+              <a href="/post/2014pakete_entfernen/" class="link mid-gray dim">
+                 Alle Pakete eines Repos entfernen
+              </a>
+            </li>
+          
+        
+          
+            <li class="mb2 mr3">
+              <a href="/index.php/2014/12/08/dummy-interface/" class="link mid-gray dim">
+                 Dummy Interface
+              </a>
+            </li>
+          
+        
+          
+            <li class="mb2 mr3">
+              <a href="/post/2014hwclock/" class="link mid-gray dim">
+                 Hwclock adjust
+              </a>
+            </li>
+          
+        
+          
+        
+      </ul>
+    </div>
+  
+
+
+    </article>
+    <div class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        19 More Posts
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2015qcow2_lokal/" class="link ph2 pv2 db black">
+            QCOW2 Images lokal einbinden
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2015zugriffsrechte_usb/" class="link ph2 pv2 db black">
+            Zugriffsrechte auf Arduino und USB-Uart
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2015centos_lxc/" class="link ph2 pv2 db black">
+            Centos-Container für LXC erstellen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2014pakete_entfernen/" class="link ph2 pv2 db black">
+            Alle Pakete eines Repos entfernen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/index.php/2014/12/08/dummy-interface/" class="link ph2 pv2 db black">
+            Dummy Interface
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2014hwclock/" class="link ph2 pv2 db black">
+            Hwclock adjust
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2014export_domain/" class="link ph2 pv2 db black">
+            rhev/ovirt Export Domain bereinigen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2014gluster_uuid/" class="link ph2 pv2 db black">
+            Gluster UUID modifizieren
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013postgres/" class="link ph2 pv2 db black">
+            Postgres Spalten finden
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013uuid_erstellen/" class="link ph2 pv2 db black">
+            UUID für RHEV oder ovirt erstellen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013verschluesselt_tar/" class="link ph2 pv2 db black">
+            Verschlüsselte TAR-Backups erstellen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013wlan_ohnenm/" class="link ph2 pv2 db black o-50">
+            Redhat / Fedora. Wlan ohne Network Manager konfigurieren
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013ovirt_disk_db/" class="link ph2 pv2 db black">
+            rhev/ovirt Defekte Disk-Images aus der DB entfernen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013sg_devices/" class="link ph2 pv2 db black">
+            Mapping von SG-Devices anzeigen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013nat/" class="link ph2 pv2 db black">
+            NAT forwarding auf Linux
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013storagetipps/" class="link ph2 pv2 db black">
+            Tipps für das Storage-Setup
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013vios/" class="link ph2 pv2 db black">
+            Konfiguration von VIOS auf Powerlinux7R2
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2013_ads_integration/" class="link ph2 pv2 db black">
+            Linux-Integration in ADS Domains
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2010thinprovisioning/" class="link ph2 pv2 db black">
+            Thin Provisioning Disk für iSCSI-Target erstellen
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/post/2010rekursiv/" class="link ph2 pv2 db black">
+            Verzeichnisse rekursiv löschen
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://astolzen.github.i0/" >
+    &copy; 2017 astolzen.github.io
+  </a>
+  
+
+
+
+  <a href="https://twitter.com/myandi" class="link-transition twitter link dib z-999 pt3 pt0-l mr2" title="Twitter link">
+    <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+  </a>
+
+
+
+
+
+  <a href="https://github.com/astolzen" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="http://astolzen.github.i0/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

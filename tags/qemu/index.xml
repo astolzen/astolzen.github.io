@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qemu on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/qemu/</link>
+    <description>Recent content in Qemu on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Tue, 28 Jul 2015 18:21:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>QCOW2 Images lokal einbinden</title>
+      <link>http://astolzen.github.i0/post/2015qcow2_lokal/</link>
+      <pubDate>Tue, 28 Jul 2015 18:21:10 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2015qcow2_lokal/</guid>
+      <description>Mit Hilfe des &amp;#8222;Network Block Device&amp;#8220; nbd lassen sich qcow2-Images auch lokal einbinden. Dazu muss zunächst das passende Kernelmodul geladen werden:
+modprobe nbd max_part=8
+wobei _maxpart die maximale Zahl der Partitionen pro Device festlegt
+Das Image erstellet:
+qemu-img -f qcow2 disk.qcow2 20G
+Dann läßt sich das Image dem Device zuordnen:
+qemu-nbd -c /dev/nbd0 disk.qcow2
+und regulär via parted oder fdisk formatieren, mit einem Dateisystem versehen und mounten:
+fdisk /dev/nbd0 .. mkfs.</description>
+    </item>
+    
+  </channel>
+</rss>

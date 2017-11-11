@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ovirt on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/categories/ovirt/</link>
+    <description>Recent content in Ovirt on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Wed, 17 Jul 2013 10:53:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/categories/ovirt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>rhev/ovirt Defekte Disk-Images aus der DB entfernen</title>
+      <link>http://astolzen.github.i0/post/2013ovirt_disk_db/</link>
+      <pubDate>Wed, 17 Jul 2013 10:53:26 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013ovirt_disk_db/</guid>
+      <description>Wenn es beim Import von Templates oder VMs aus der Export-Domain zu Problemen kommt, kann es sein, dass Disk-Images im Status &amp;#8222;locked&amp;#8220; bleiben. Das blockiert die importierte VM oder das Template, so dass diese sich nicht löschen lassen. In der Folge läßt sich die Export-Domain im Zweifelsfall nicht mehr abhängen.
+Um den Fehler zu beheben, muss der Administrator die Disk-Images auf der Export-Domain manuell löschen und zudem die Einträge aus der Datenbank auf dem rhev-m/ovirt-Server händisch entfernen:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postgres on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/postgres/</link>
+    <description>Recent content in Postgres on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Tue, 17 Dec 2013 16:43:15 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Postgres Spalten finden</title>
+      <link>http://astolzen.github.i0/post/2013postgres/</link>
+      <pubDate>Tue, 17 Dec 2013 16:43:15 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013postgres/</guid>
+      <description>Um in einer Postgres Datenbank die Tabellen zu finden, welche eine bestimmte Spalte enthalten genügt folgendes Kommando:
+select table_name from information_schema.columns where column_name = &#39;Spaltenname&#39;;</description>
+    </item>
+    
+  </channel>
+</rss>

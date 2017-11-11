@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kvm on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/kvm/</link>
+    <description>Recent content in Kvm on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Tue, 28 Jul 2015 18:21:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/kvm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>QCOW2 Images lokal einbinden</title>
+      <link>http://astolzen.github.i0/post/2015qcow2_lokal/</link>
+      <pubDate>Tue, 28 Jul 2015 18:21:10 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2015qcow2_lokal/</guid>
+      <description>Mit Hilfe des &amp;#8222;Network Block Device&amp;#8220; nbd lassen sich qcow2-Images auch lokal einbinden. Dazu muss zunächst das passende Kernelmodul geladen werden:
+modprobe nbd max_part=8
+wobei _maxpart die maximale Zahl der Partitionen pro Device festlegt
+Das Image erstellet:
+qemu-img -f qcow2 disk.qcow2 20G
+Dann läßt sich das Image dem Device zuordnen:
+qemu-nbd -c /dev/nbd0 disk.qcow2
+und regulär via parted oder fdisk formatieren, mit einem Dateisystem versehen und mounten:
+fdisk /dev/nbd0 .. mkfs.</description>
+    </item>
+    
+    <item>
+      <title>UUID für RHEV oder ovirt erstellen</title>
+      <link>http://astolzen.github.i0/post/2013uuid_erstellen/</link>
+      <pubDate>Mon, 16 Dec 2013 16:45:28 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013uuid_erstellen/</guid>
+      <description>Ein Hypervisor Node für ovirt oder RHEV bekommt eine eindeutige UUID. Diese errechnet sich via dmidecode aus der BIOS-Seriennummer. Simple Whitebox-Server haben aber oft keine individuelle Serien-Nummer im Bios. Setzt man eine ovirt/RHEV-Umgebung mit solchen Serversystemen auf, bekommen alle Hypervisor-Nodes die gleiche UUID und das RHEV/ovirt-Setup schlägt fehl.
+Um das zu vermeiden kann der Verwalter, vor der Installation des Hypervisors und dessen ovirt/RHEV-Steuerdaemons vdsm, eine zufällige UUID für das jeweilige System erzeugen:</description>
+    </item>
+    
+    <item>
+      <title>rhev/ovirt Defekte Disk-Images aus der DB entfernen</title>
+      <link>http://astolzen.github.i0/post/2013ovirt_disk_db/</link>
+      <pubDate>Wed, 17 Jul 2013 10:53:26 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013ovirt_disk_db/</guid>
+      <description>Wenn es beim Import von Templates oder VMs aus der Export-Domain zu Problemen kommt, kann es sein, dass Disk-Images im Status &amp;#8222;locked&amp;#8220; bleiben. Das blockiert die importierte VM oder das Template, so dass diese sich nicht löschen lassen. In der Folge läßt sich die Export-Domain im Zweifelsfall nicht mehr abhängen.
+Um den Fehler zu beheben, muss der Administrator die Disk-Images auf der Export-Domain manuell löschen und zudem die Einträge aus der Datenbank auf dem rhev-m/ovirt-Server händisch entfernen:</description>
+    </item>
+    
+  </channel>
+</rss>

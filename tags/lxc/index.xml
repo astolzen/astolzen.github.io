@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lxc on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/lxc/</link>
+    <description>Recent content in Lxc on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Wed, 08 Apr 2015 11:19:50 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/lxc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Centos-Container für LXC erstellen</title>
+      <link>http://astolzen.github.i0/post/2015centos_lxc/</link>
+      <pubDate>Wed, 08 Apr 2015 11:19:50 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2015centos_lxc/</guid>
+      <description>Für CentOS 6 gibt es im paket lxc-templates eine Vorlage. Dazu muss man lediglich das Skript
+/usr/share/lxc/templates/lxc-centos
+anpassen und den richtigen Zielpfad für das Dateisystem festlegen (/var/lib/libvirt/filesystems):
+Im Anschluss einfach mit dem Virt-Manager oder virt-install &amp;#8211;connect lxc:// &amp;#8230;. den Container erstellen
+CentOS 7 hingegen muss der Verwalter manuell anlegen. Das funktioniert jedoch via yum auf einem CentOS-System als Host relativ simpel:
+yum -y --installroot=/var/lib/libvirt/filesystems/mycentos7 --releasever=7 group install &amp;quot;base&amp;quot; echo &amp;quot;pts/0&amp;quot; &amp;gt;&amp;gt; /var/lib/libvirt/filesystems/mycentos7/etc/securetty  Für beide Installationen gilt:</description>
+    </item>
+    
+  </channel>
+</rss>

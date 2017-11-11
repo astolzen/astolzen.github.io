@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Wed, 12 Nov 2014 16:19:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hwclock adjust</title>
+      <link>http://astolzen.github.i0/post/2014hwclock/</link>
+      <pubDate>Wed, 12 Nov 2014 16:19:00 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2014hwclock/</guid>
+      <description>Beim Setzen der Hardware-Uhr (auch in einer VM) schreibt hwclock ein &amp;#8222;adjust file&amp;#8220; welches die Differenz der Hardware-Uhr (UTC) zur Systemzeit (GMT+1) ablegt. Ist die Differenz zwischen System- und Hardware-Zeit nicht korrekt konfiguriert, wird der Server/VM nach einem Neustart in der Zeit um eines Stunde abweichen. Abhilfe schafft es dann, die hwclock auf die locale Zeit zu zwingen:
+ntpdate ptbtime1.ptb.de hwclock -w --localtime  oder einfach zur Sicherheit das Adjust-File löschen</description>
+    </item>
+    
+  </channel>
+</rss>

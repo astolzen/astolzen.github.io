@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iptables on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/iptables/</link>
+    <description>Recent content in Iptables on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Mon, 03 Jun 2013 18:27:38 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NAT forwarding auf Linux</title>
+      <link>http://astolzen.github.i0/post/2013nat/</link>
+      <pubDate>Mon, 03 Jun 2013 18:27:38 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013nat/</guid>
+      <description>IP-Forwarding im Kernel einschaten:
+echo &amp;quot;1&amp;quot; &amp;gt; /proc/sys/net/ipv4/ip_forward
+Um die Einstellung permanten zu machen, den entsprechenden Eintrag in /etc/sysctl.conf anpassen
+Dann das NAT-Masquerading auf der Firewall für den externen Port aktivieren.
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+fertig.</description>
+    </item>
+    
+  </channel>
+</rss>

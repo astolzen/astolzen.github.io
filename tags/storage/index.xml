@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Storage on astolzen.github.io</title>
+    <link>http://astolzen.github.i0/tags/storage/</link>
+    <description>Recent content in Storage on astolzen.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-DE</language>
+    <lastBuildDate>Mon, 10 Jun 2013 11:54:14 +0000</lastBuildDate>
+    
+	<atom:link href="http://astolzen.github.i0/tags/storage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mapping von SG-Devices anzeigen</title>
+      <link>http://astolzen.github.i0/post/2013sg_devices/</link>
+      <pubDate>Mon, 10 Jun 2013 11:54:14 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013sg_devices/</guid>
+      <description>Um die Zuweisung von physischen SCSI-Geräten zu logischen devices darzustellen, gibt es ein simples Tool namens _sgmap. Das Binary befindet sich im Paket _sg3utils
+&amp;lt;br /&amp;gt; yum install sg3_utils&amp;lt;br /&amp;gt; 
+Dann liefert das Proramm die Zuweisungsliste:
+`
+sg_map
+ /dev/sg0 /dev/sda
+/dev/sg1 /dev/scd0
+/dev/sg2 /dev/scd1
+/dev/sg3 /dev/sdb
+/dev/sg4 /dev/sdc
+/dev/sg5 /dev/sdd
+/dev/sg6
+/dev/sg7 /dev/nst0
+/dev/sg8
+/dev/sg9 /dev/sde
+/dev/sg10 /dev/sdf
+/dev/sg11
+/dev/sg12 /dev/sdg
+/dev/sg13
+`</description>
+    </item>
+    
+    <item>
+      <title>Mapping von SG-Devices anzeigen</title>
+      <link>http://astolzen.github.i0/post/2013sg_devices/</link>
+      <pubDate>Mon, 10 Jun 2013 11:54:14 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013sg_devices/</guid>
+      <description>Um die Zuweisung von physischen SCSI-Geräten zu logischen devices darzustellen, gibt es ein simples Tool namens _sgmap. Das Binary befindet sich im Paket _sg3utils
+&amp;lt;br /&amp;gt; yum install sg3_utils&amp;lt;br /&amp;gt; 
+Dann liefert das Proramm die Zuweisungsliste:
+`
+sg_map
+ /dev/sg0 /dev/sda
+/dev/sg1 /dev/scd0
+/dev/sg2 /dev/scd1
+/dev/sg3 /dev/sdb
+/dev/sg4 /dev/sdc
+/dev/sg5 /dev/sdd
+/dev/sg6
+/dev/sg7 /dev/nst0
+/dev/sg8
+/dev/sg9 /dev/sde
+/dev/sg10 /dev/sdf
+/dev/sg11
+/dev/sg12 /dev/sdg
+/dev/sg13
+`</description>
+    </item>
+    
+    <item>
+      <title>Tipps für das Storage-Setup</title>
+      <link>http://astolzen.github.i0/post/2013storagetipps/</link>
+      <pubDate>Mon, 25 Mar 2013 15:12:12 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2013storagetipps/</guid>
+      <description>Fdisk ohne DOS-CHS Fdisk arbeitet unter Linux per Default in der alten DOS-CHS (Cylinder/Head/Sector) Zählweise. Um ohne DOS-Limits und CHS zu arbeite, fdisk immer mit:
+fdisk -cu
+starten.
+Partitionsänderung in den laufenden Kernel lesen Änderungen an einer Festplatte mit aktiven Partitionen werden vom laufenden Kernel nicht erkannt. Um einen Neustart zu vermeiden liest
+partx -a /dev/sdx
+die neuen Partitionen neu ein. Das funktioniert aber nur, wenn neue Partitionen hinzugefügt wurden, nicht bei Löschungen oder Änderungen.</description>
+    </item>
+    
+    <item>
+      <title>Thin Provisioning Disk für iSCSI-Target erstellen</title>
+      <link>http://astolzen.github.i0/post/2010thinprovisioning/</link>
+      <pubDate>Sun, 17 Oct 2010 14:47:47 +0000</pubDate>
+      
+      <guid>http://astolzen.github.i0/post/2010thinprovisioning/</guid>
+      <description>Mit Hilfe einer Sparse-Datei läßt sich auf die schnelle eine leere Datei zu erstellen, die auf maximale 100 GB wachsen kann. &amp;#8218;dd&amp;#8216; schreibt zwar nur einen Block setzt dabei jedoch den Pointer an das virtuelle Ende der Datei bei 100 GByte
+dd if=/dev/zero of=iscsi0.dsk bs=512 count=1 seek=209715200
+Diese Datei läßt sich dann dem iSCSI-Target übergeben und wird so zur Thin-provisioned LUN.</description>
+    </item>
+    
+  </channel>
+</rss>
